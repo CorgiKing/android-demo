@@ -20,6 +20,8 @@ public class BarActivity extends Activity {
 	private TextView seekBarStatusText;
 	private RatingBar ratingBar;
 	private TextView ratingBarStatusText;
+	
+	private Thread horizonThread;
 
 	private int horizonBarStatus;// 完成进度
 	private Handler mHandler;
@@ -48,6 +50,12 @@ public class BarActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	protected void onStop() {
+		horizonThread.interrupt();
+		super.onStop();
 	}
 
 	private void init() {
@@ -111,7 +119,7 @@ public class BarActivity extends Activity {
 	}
 
 	private void startThread() {
-		new Thread(new Runnable() {
+		horizonThread = new Thread(new Runnable() {
 
 			@Override
 			public void run() {
@@ -129,9 +137,11 @@ public class BarActivity extends Activity {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
+						break;
 					}
 				}
 			}
-		}).start();
+		});
+		horizonThread.start();
 	}
 }

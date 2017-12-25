@@ -49,8 +49,9 @@ public class MainActivity extends Activity {
 		LinearLayout itemList = (LinearLayout) findViewById(R.id.item_list);
 		
 		//5.1进度条类组件
-		Button btn1 = newBtn("进度条类组件", BarActivity.class);
-		itemList.addView(btn1);
+		itemList.addView(newBtn("进度条类组件", BarActivity.class));
+		itemList.addView(newBtn("ImageSwitcher组件", ImageSwitcherActivity.class));
+		itemList.addView(newBtn("GridView组件", GridViewActivity.class));
 	}
 	private <T> Button newBtn(String item, final Class<T> clazz){
 		Button btn = new Button(this);
