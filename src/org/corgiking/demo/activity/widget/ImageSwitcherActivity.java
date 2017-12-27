@@ -1,4 +1,11 @@
-package org.corgiking.demo.activity;
+package org.corgiking.demo.activity.widget;
+
+import org.corgiking.demo.activity.R;
+import org.corgiking.demo.activity.R.anim;
+import org.corgiking.demo.activity.R.drawable;
+import org.corgiking.demo.activity.R.id;
+import org.corgiking.demo.activity.R.layout;
+import org.corgiking.demo.activity.R.menu;
 
 import android.app.Activity;
 import android.os.Bundle;

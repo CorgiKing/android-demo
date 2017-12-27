@@ -7,38 +7,35 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="org.corgiking.demo.activity.widget.BarWidgetActivity" >
+    tools:context="org.corgiking.demo.activity.widget.ListWidgetActivity" >
 
-    <TextView android:id="@+id/horizontalBarStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <ProgressBar
-        android:id="@+id/horizontalBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:max="100"
-        android:progress="0" />
-
-    <TextView
-        android:id="@+id/seekBarStatus"
+    <TextView 
+        android:id="@+id/spinnerText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
-    <SeekBar
-        android:id="@+id/seekBar"
+    <Spinner
+        android:id="@+id/spinner1"
+        android:entries="@array/ctype"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/ratingBarStatus"
+    
+    <TextView 
+        android:id="@+id/spinnerText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spinner2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-    <RatingBar
-        android:id="@+id/ratingBar"
+    
+    <TextView 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="ListView:"/>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
 
 </LinearLayout>

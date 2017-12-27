@@ -1,5 +1,9 @@
-package org.corgiking.demo.activity;
+package org.corgiking.demo.activity.widget;
 
+import org.corgiking.demo.activity.R;
+import org.corgiking.demo.activity.R.id;
+import org.corgiking.demo.activity.R.layout;
+import org.corgiking.demo.activity.R.menu;
 import org.corgiking.demo.util.ToastUtil;
 
 import android.app.Activity;
@@ -13,7 +17,7 @@ import android.widget.RatingBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class BarActivity extends Activity {
+public class BarWidgetActivity extends Activity {
 	private ProgressBar horizonBar;
 	private TextView horizonBarStatusText;
 	private SeekBar seekBar;
@@ -70,7 +74,7 @@ public class BarActivity extends Activity {
 					horizonBar.setProgress(horizonBarStatus);
 					horizonBarStatusText.setText(horizonBar.getProgress() + "%");
 					if (horizonBar.getProgress() == horizonBar.getMax()) {
-						ToastUtil.showToast(BarActivity.this, "进度完成！");
+						ToastUtil.showToast(BarWidgetActivity.this, "进度完成！");
 						horizonBarStatus = 0;
 						// 设置进度条不显示，并且不占用空间
 						// horizonBar.setVisibility(View.GONE);
@@ -112,7 +116,7 @@ public class BarActivity extends Activity {
 			public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 				int progress = ratingBar.getProgress();
 				float step = ratingBar.getStepSize();
-				ToastUtil.showToast(BarActivity.this, "星级评分");
+				ToastUtil.showToast(BarWidgetActivity.this, "星级评分");
 				ratingBarStatusText.setText("进度："+progress+",星级："+rating+",最少改变星级:"+step);
 			}
 		});

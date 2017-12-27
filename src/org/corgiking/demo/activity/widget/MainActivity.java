@@ -1,4 +1,9 @@
-package org.corgiking.demo.activity;
+package org.corgiking.demo.activity.widget;
+
+import org.corgiking.demo.activity.R;
+import org.corgiking.demo.activity.R.id;
+import org.corgiking.demo.activity.R.layout;
+import org.corgiking.demo.activity.R.menu;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -49,9 +54,11 @@ public class MainActivity extends Activity {
 		LinearLayout itemList = (LinearLayout) findViewById(R.id.item_list);
 		
 		//5.1进度条类组件
-		itemList.addView(newBtn("进度条类组件", BarActivity.class));
+		itemList.addView(newBtn("进度条类组件", BarWidgetActivity.class));
 		itemList.addView(newBtn("ImageSwitcher组件", ImageSwitcherActivity.class));
 		itemList.addView(newBtn("GridView组件", GridViewActivity.class));
+		itemList.addView(newBtn("列表组件", ListWidgetActivity.class));
+		itemList.addView(newBtn("选项卡组件", TabWidgetActivity.class));
 	}
 	private <T> Button newBtn(String item, final Class<T> clazz){
 		Button btn = new Button(this);

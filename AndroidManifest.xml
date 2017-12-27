@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="org.corgiking.demo.activity.widget.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,16 +23,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BarActivity"
+            android:name="org.corgiking.demo.activity.widget.BarWidgetActivity"
             android:label="@string/title_activity_bar" >
         </activity>
         <activity
-            android:name=".ImageSwitcherActivity"
+            android:name="org.corgiking.demo.activity.widget.ImageSwitcherActivity"
             android:label="@string/title_activity_image_switcher" >
         </activity>
         <activity
-            android:name=".GridViewActivity"
+            android:name="org.corgiking.demo.activity.widget.GridViewActivity"
             android:label="@string/title_activity_grid_view" >
+        </activity>
+        <activity
+            android:name="org.corgiking.demo.activity.widget.ListWidgetActivity"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name="org.corgiking.demo.activity.widget.TabWidgetActivity"
+            android:label="@string/title_activity_tab_widget" >
         </activity>
     </application>
 
